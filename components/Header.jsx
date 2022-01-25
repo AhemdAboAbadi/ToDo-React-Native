@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-function Header() {
+import { View, Text, StyleSheet } from 'react-native';
+
+export default function Header() {
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>My toDo </Text>
+      <Text style={styles.title}>My toDos</Text>
     </View>
   );
 }
@@ -15,11 +16,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'coral',
   },
   title: {
-    flex: 1,
     textAlign: 'center',
-    fontWeight:'bold',
-    fontSize:22
-  }
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
-
-export default Header;

@@ -1,25 +1,22 @@
 import React from 'react'
-import { StyleSheet , Text , TouchableOpacity} from 'react-native'
+import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 
-function ToDoItem({item}) {
+export default function TodoItem({ pressHandler, item }) {
   return (
-    <TouchableOpacity>
-      <Text style={styles.text}>
-        {item.text}
-      </Text>
+    <TouchableOpacity onPress={() => pressHandler(item.key)}>
+      <Text style={styles.item}>{item.text}</Text>
     </TouchableOpacity>
   )
 }
 
 const styles = StyleSheet.create({
-  text:{
-    padding:15 ,
-    borderColor:'#bbb',
-    borderWidth:1 ,
-    marginTop:'10' ,
-    borderStyle:'dashed'
+  item: {
+    padding: 16,
+    marginTop: 16,
+    borderColor: '#bbb',
+    borderWidth: 1,
+    borderStyle: "dashed",
+    borderRadius: 1,
+    borderRadius: 10,
   }
-})
-
-
-export default ToDoItem
+});
